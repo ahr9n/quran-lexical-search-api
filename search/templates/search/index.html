@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="ar">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>{{ title }}</title>
+        <link href="/../static/css/style.css" rel="stylesheet">
+        <link href="/../static/img/quran.png" rel="icon" type="image/png" >
+    </head>
+    <body>
+        <div style="text-align: center; font-family: 'Noto Kufi Arabic'">
+            <img src="/../static/img/quran.png" alt="quran" style="padding-top: 100px; background-color: transparent; width: 200px; height: 200px;">
+            <h1>سلِ القرآن الكريم</h1>
+        </div>
+        <form class="search-form" action="{% url 'search:search_by_word' %}" method="post">
+            {% csrf_token %}
+            <input dir="rtl" class="search-input" type="text" name="ayah" id="ayah">
+            <br>
+            <input class="submit" type="submit" value="بحــث بالكلمة">
+        </form>
+    </body>
+</html>
