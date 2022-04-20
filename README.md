@@ -3,7 +3,7 @@
 ## Setup
 Requires Python3 and the package installer for Python (pip) to run:
 
-* Install requirements (Django4): `pip install -r requirements.txt`
+* Install requirements: `pip install -r requirements.txt`
 * After cloning the repository, refer to the project folder and:
   1. Create new migrations based on the changes in models: `python3 manage.py makemigrations`
   2. Apply the migrations to the database: `python3 manage.py migrate`
@@ -45,7 +45,7 @@ Requires Python3 and the package installer for Python (pip) to run:
   - takes surah number,
   - returns all verses in this Surah in `json`. _Notice that Surah numbers are between 1 and 114._
 
-* [get_verse_api](https://quran-search-api.herokuapp.com/api/get-verse/2/3)
+* [get_verse_api](https://ahr9n-quran-api.herokuapp.com/api/get-verse/2/3)
   - takes surah number and verse number **in the specified surah**,
   - returns the specific verse in `json`. 
   - For example, given number of surah "2" and number of verse "3", it returns the third verse of the second surah:
