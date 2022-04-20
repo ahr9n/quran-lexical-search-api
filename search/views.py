@@ -6,9 +6,8 @@ from .models import Verses
 # Create your views here.
 
 def index(request):
-    verses = Verses.objects.all()
-    verses = {'verses': verses}
-    return render(request, 'search/search.html', verses)
+    """ Home Page """
+    return render(request, "search/index.html")
 
 
 def search_by_word(request):
