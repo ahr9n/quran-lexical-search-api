@@ -1,0 +1,51 @@
+/* styles for search */
+
+.search-form{
+    display: grid;
+    margin: auto;
+    padding: 10px;
+    height: 100px;
+    width: 500px;
+    border: 2px solid #222;
+}
+.search-input{
+    padding: 10px;
+    border: 2px solid cadetblue;
+}
+.submit{
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.ayah{
+    direction: rtl;
+    font-family: "Amiri Quran";
+}
+.ayah span{
+    color: dimgrey;
+}
+.ayah-audio{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #222;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* styles for API DOCS */
+
+.container{
+    padding: 10px;
+    background-color: #EEE;
+}
+.container .row{
+    padding: 10px;
+    border: 1px solid #222;
+    margin-bottom: 3px;
+}
+.container .row p{
+    padding-left: 10px;
+}

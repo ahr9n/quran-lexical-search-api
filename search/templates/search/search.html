@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="ar">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>{{ title }}</title>
+        <link href="/../static/css/style.css" rel="stylesheet">
+        <link href="/../static/img/quran.png" rel="icon" type="image/png" >
+    </head>
+    <body>
+        <div style="text-align: center; font-family: 'Noto Kufi Arabic'">
+            <img src="/../static/img/quran.png" alt="quran" style="background-color: transparent; width: 100px; height: 100px;">
+            <h1>سلِ القرآن الكريم</h1>
+        </div>
+        <form class="search-form" action="{% url 'search:search_by_word' %}" method="post">
+            {% csrf_token %}
+            <input dir="rtl" class="search-input" type="text" name="ayah" id="ayah">
+            <br>
+            <input class="submit" type="submit" value="بحـــــث">
+        </form>
+        {% for verse in verses %}
+            <div>
+                <h4 class="ayah">
+                    {{ verse.verse }}
+                    <span>({{ verse.surah }})|({{ verse.numberInSurah }})</span>
+                </h4>
+                <div class="ayah-audio" data-audioSource="{{ verse.audio }}">▶</div>
+            </div>
+            <hr>
+        {% endfor %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $('.ayah-audio').click(function (){
+                source = $(this).attr('data-audioSource');
+                const audio = new Audio(source);
+                audio.play();
+            });
+        </script>
+    </body>
+</html>
