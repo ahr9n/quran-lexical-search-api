@@ -8,14 +8,14 @@
     </head>
     <body>
         <div style="text-align: center; font-family: 'Noto Kufi Arabic'">
-            <img src="/../static/img/quran.png" alt="quran" style="background-color: transparent; width: 100px; height: 100px;">
-            <h1>سلِ القرآن الكريم</h1>
+{#            <span>سلِ القرآن الكريم</span>#}
+{#            <img src="/../static/img/quran.png" alt="quran" style="background-color: transparent; width: 100px; height: 100px;">#}
         </div>
         <form class="search-form" action="{% url 'search:search_by_word' %}" method="post">
             {% csrf_token %}
             <input dir="rtl" class="search-input" type="text" name="ayah" id="ayah">
             <br>
-            <input class="submit" type="submit" value="بحـــــث">
+            <input class="submit" type="submit" value="بحــث بالكلمة">
         </form>
         {% for verse in verses %}
             <div>
