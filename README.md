@@ -3,21 +3,16 @@
 ## Setup
 Requires Python3 and the package installer for Python (pip) to run:
 
-* Install requirements: `pip install -r requirements.txt`
-* After cloning the repository, refer to the project folder and:
-  1. Create new migrations based on the changes in models: `python3 manage.py makemigrations`
-  2. Apply the migrations to the database: `python3 manage.py migrate`
-  3. Create a superuser to be able to use Django Admin Interface: `python3 manage.py createsuperuser`
-  4. Run the app locally: `python3 manage.py runserver`
-  5. Visit the site: `http://localhost:8000`
-  6. Enjoy!
+```bash
+./run.sh
+```
 
 ## How to use
 * [all_verses_api](https://ahr9n-quran-api.herokuapp.com/api/all-verses)
-  - returns all verses of quran. 
+  - returns all verses of quran.
 * [search_word_api](https://ahr9n-quran-api.herokuapp.com/api/search-word/مدهامتان)
   - takes a string,
-  - returns all verses in `json`, containing the given string. 
+  - returns all verses in `json`, containing the given string.
   - For example, given a string "مدهامتان", it returns:
   ```json
   {
@@ -47,16 +42,16 @@ Requires Python3 and the package installer for Python (pip) to run:
 
 * [get_verse_api](https://ahr9n-quran-api.herokuapp.com/api/get-verse/2/3)
   - takes surah number and verse number **in the specified surah**,
-  - returns the specific verse in `json`. 
+  - returns the specific verse in `json`.
   - For example, given number of surah "2" and number of verse "3", it returns the third verse of the second surah:
   ```json
   {
-    "data": 
+    "data":
       {
         "verse_pk": "S002V003",
         "page": 2,
-        "hizbQuarter": 1, 
-        "juz": 1, 
+        "hizbQuarter": 1,
+        "juz": 1,
         "surah": "البَقَرَة",
         "verse": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ",
         "verseWithoutTashkeel": "الذين يؤمنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون",
