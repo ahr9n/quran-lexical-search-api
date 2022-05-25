@@ -1,9 +1,11 @@
 # RESTful Quran API
 
 ## Setup
-Requires Python3 and the package installer for Python (pip) to run:
+Requires Python3 and the package installer for Python (pip) to run.
 
 ```bash
+git clone https://github.com/ahr9n/quran-api.git
+cd quran-api
 ./run.sh
 ```
 
