@@ -51,6 +51,15 @@
     margin-top: 10px;
     margin-bottom: 5px;
     font-family: "Noto Kufi Arabic", sans-serif;
+
+    /* center */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 .ayah{
     direction: rtl;
