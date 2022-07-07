@@ -13,10 +13,18 @@
         </div>
         <form class="search-form" action="{% url 'search:search_by_word' %}" method="post">
             {% csrf_token %}
-            <input dir="rtl" class="search-input" type="text" name="ayah" id="ayah">
+            <input dir="rtl" class="results-input" type="text" name="ayah" id="ayah">
             <br>
-            <input class="submit" type="submit" value="بحــث بالكلمة">
+            <input class="submit" type="submit" value="ابحــث باللفظ" name="lexical">
+            <input class="submit" type="submit" value="ابحـث بالمعنى" name="semantic">
         </form>
+        <br><br><br><br>
+
+        <div style="text-align: center; font-family: 'Noto Kufi Arabic'">
+            <span>نتائح البحث
+                {% if search_result == semantic %}بالمعنى:{% else %}باللفظ:{% endif %} {{ verses.count }} آيات
+            </span>
+        </div>
         {% for verse in verses %}
             <div>
                 <h4 class="ayah">
