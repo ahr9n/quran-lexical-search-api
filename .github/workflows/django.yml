@@ -24,7 +24,8 @@ jobs:
     - name: Install Dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip3 install -r requirements.txt
     - name: Run Django unit tests
       run: |
+        pip3 install --user django
         python3 manage.py test
